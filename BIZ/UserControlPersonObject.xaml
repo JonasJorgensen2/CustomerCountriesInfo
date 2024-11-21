@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="BIZ.UserControlPersonObject"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BIZ"
+             mc:Ignorable="d"
+             d:DesignHeight="100"
+             MaxHeight="100"
+             d:DesignWidth="800">
+    <Grid x:Name="MainGrid"
+          Background="White">
+        <GroupBox>
+            <Grid Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="CustomerName"
+                           Grid.Column="0"
+                           TextWrapping="Wrap"
+                           Text="{Binding Customer.name}" />
+                <TextBlock x:Name="CustomerCity"
+                           Grid.Column="1"
+                           TextWrapping="Wrap"
+                           Text="{Binding Customer.city}" />
+                <TextBlock x:Name="CustomerCountry"
+                           Grid.Column="2"
+                           TextWrapping="Wrap"
+                           Text="{Binding Customer.country.CountryName}" />
+                <Viewbox Grid.Column="3">
+                    <Border BorderThickness="15"
+                            BorderBrush="Black">
+                        <Image Source="{Binding Customer.country.secondFlagUrl}"
+                               Stretch="None" />
+                    </Border>
+                </Viewbox>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

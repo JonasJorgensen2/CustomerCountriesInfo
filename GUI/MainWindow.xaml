@@ -1,0 +1,27 @@
+﻿<Window x:Class="GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Icon="pack://application:,,,/Image/Logo.png"
+        mc:Ignorable="d"
+        Title="Customer and Country" Height="600" Width="1200"
+        Loaded="Window_Loaded">
+    <Grid x:Name="MainGrid">
+        <TabControl Margin="1">
+            <TabItem Header=" Customer ">
+                <Grid x:Name="CustomerGrid"
+                      Background="White" />
+            </TabItem>
+            <TabItem Header="Customers Country Info ">
+                <Grid Name="CountryGrid"
+                      Background="White" />
+            </TabItem>
+           
+        </TabControl>
+
+    </Grid>
+</Window>
